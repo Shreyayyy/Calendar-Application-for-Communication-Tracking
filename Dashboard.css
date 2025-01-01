@@ -1,0 +1,355 @@
+/* Reset and Base Styles */
+*,
+*::before,
+*::after {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Inter', sans-serif;
+  background-color: #1f1f1f;
+  color: #ecf0f1;
+}
+
+.dashboard {
+  width: 95%;
+  max-width: 1200px;
+  margin: 40px auto;
+  padding: 30px;
+  background-color: #2c3e50;
+  border-radius: 12px;
+  box-shadow: 0 8px 32px rgba(0, 0, 0, 0.1);
+}
+
+h2 {
+  text-align: center;
+  font-size: 2.5rem;
+  font-weight: 800;
+  color: #ecf0f1;
+  margin-bottom: 40px;
+  letter-spacing: 1px;
+}
+
+h3 {
+  font-size: 1.7rem;
+  color: #ecf0f1;
+  font-weight: 600;
+  text-transform: uppercase;
+  margin-bottom: 30px;
+  letter-spacing: 1px;
+  text-align: center;
+}
+
+p {
+  text-align: center;
+  color: #95a5a6;
+  font-size: 1.1rem;
+}
+
+/* Notification Badge */
+.notification-badge {
+  display: flex;
+  justify-content: flex-end;
+  font-size: 1.2rem;
+  margin-bottom: 40px;
+}
+
+.badge {
+  background-color: #e74c3c;
+  color: white;
+  padding: 12px 18px;
+  border-radius: 50%;
+  font-weight: 600;
+  font-size: 16px;
+  position: relative;
+  top: -8px;
+}
+
+/* Grid Container for Overdue and Today's Communications */
+.communications-grid-container {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 30px;
+  margin-bottom: 40px;
+}
+
+.communications-grid {
+  background: #34495e;
+  padding: 20px;
+  border-radius: 12px;
+  box-shadow: 0 12px 36px rgba(0, 0, 0, 0.1);
+  cursor: pointer;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.communications-grid:hover {
+  transform: translateY(-8px);
+  box-shadow: 0 20px 50px rgba(0, 0, 0, 0.2);
+}
+
+.communications-grid h3 {
+  color: #ecf0f1;
+  font-size: 1.6rem;
+  font-weight: 700;
+  margin-bottom: 15px;
+  letter-spacing: 0.5px;
+}
+
+table {
+  width: 100%;
+  border-collapse: collapse;
+}
+
+table th,
+table td {
+  padding: 15px;
+  text-align: left;
+  font-size: 1.1rem;
+  color: #bdc3c7;
+  border-bottom: 2px solid #3c4a58;
+}
+
+table th {
+  background-color: #34495e;
+  font-weight: 600;
+  color: #ecf0f1;
+}
+
+table tr:hover {
+  background-color: #3d566e;
+}
+
+table td {
+  color: #ecf0f1;
+  padding-right: 15px;
+}
+
+.highlight-red {
+  background-color: #f8d7da;
+}
+
+.highlight-yellow {
+  background-color: #fff3cd;
+}
+
+/* Empty State Text */
+p {
+  font-size: 1.2rem;
+  color: #7f8c8d;
+  margin-top: 30px;
+}
+
+/* Action Buttons */
+.log-comm-btn,
+.edit-comm-btn,
+.delete-comm-btn {
+  background-color: #2980b9;
+  color: white;
+  padding: 12px 25px;
+  border-radius: 30px;
+  font-weight: 600;
+  font-size: 1rem;
+  border: none;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  width: 100%;
+  margin: 8px 0;
+}
+
+.log-comm-btn:hover,
+.edit-comm-btn:hover,
+.delete-comm-btn:hover {
+  background-color: #1f618d;
+  transform: translateY(-5px);
+}
+
+.log-comm-btn:focus,
+.edit-comm-btn:focus,
+.delete-comm-btn:focus {
+  outline: none;
+  box-shadow: 0 0 0 4px rgba(52, 152, 219, 0.3);
+}
+
+/* Communication Form */
+.communication-form {
+  background-color: #2c3e50;
+  padding: 30px;
+  border-radius: 12px;
+  box-shadow: 0 8px 30px rgba(0, 0, 0, 0.1);
+  margin-top: 40px;
+}
+
+.form-group {
+  margin-bottom: 20px;
+}
+
+label {
+  font-size: 1.1rem;
+  color: #ecf0f1;
+  font-weight: 600;
+}
+
+input,
+select,
+textarea {
+  width: 100%;
+  padding: 14px;
+  margin-top: 6px;
+  font-size: 1rem;
+  color: #34495e;
+  border: 2px solid #7f8c8d;
+  border-radius: 8px;
+  transition: all 0.3s ease;
+}
+
+input:focus,
+select:focus,
+textarea:focus {
+  border-color: #3498db;
+  outline: none;
+  box-shadow: 0 0 8px rgba(52, 152, 219, 0.2);
+}
+
+textarea {
+  height: 150px;
+  resize: vertical;
+}
+
+.form-actions {
+  display: flex;
+  justify-content: space-between;
+  gap: 15px;
+}
+
+.submit-btn,
+.cancel-btn {
+  padding: 12px 25px;
+  border-radius: 30px;
+  font-weight: 600;
+  font-size: 1rem;
+  width: 48%;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.submit-btn {
+  background-color: #2ecc71;
+  color: white;
+}
+
+.submit-btn:hover {
+  background-color: #27ae60;
+  transform: translateY(-4px);
+}
+
+.cancel-btn {
+  background-color: #e74c3c;
+  color: white;
+}
+
+.cancel-btn:hover {
+  background-color: #c0392b;
+  transform: translateY(-4px);
+}
+
+.submit-btn:focus,
+.cancel-btn:focus {
+  outline: none;
+  box-shadow: 0 0 0 4px rgba(46, 204, 113, 0.3);
+}
+
+/* Stylish Table Layout */
+.company-table {
+  width: 100%;
+  margin-top: 40px;
+  border-collapse: collapse;
+}
+
+.company-table th,
+.company-table td {
+  padding: 20px;
+  text-align: left;
+  border-bottom: 2px solid #f1f1f1;
+}
+
+.company-table th {
+  background-color: #34495e;
+  font-size: 1.2rem;
+  color: #ecf0f1;
+  font-weight: 700;
+}
+
+.company-table td {
+  font-size: 1rem;
+  color: #bdc3c7;
+}
+
+.company-table tr:hover {
+  background-color: #3c4a58;
+}
+
+.communication-item {
+  cursor: pointer;
+  font-weight: 600;
+  color: #3498db;
+  transition: color 0.3s ease, transform 0.2s ease;
+}
+
+.communication-item:hover {
+  color: #1f618d;
+  transform: scale(1.05);
+}
+
+.communication-item:focus {
+  outline: none;
+}
+
+/* Overdue & Today's Communications (Grid Layout) */
+.communications-grid-container {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 40px;
+  margin-top: 40px;
+}
+
+.communications-grid h3 {
+  font-size: 1.6rem;
+  color: #ecf0f1;
+  font-weight: 700;
+  margin-bottom: 20px;
+}
+
+.communications-grid table {
+  width: 100%;
+  border-collapse: collapse;
+}
+
+.communications-grid table th,
+.communications-grid table td {
+  padding: 15px;
+  text-align: left;
+}
+
+.communications-grid table th {
+  font-weight: 600;
+  color: #ecf0f1;
+}
+
+.communications-grid table td {
+  font-size: 1.1rem;
+  color: #bdc3c7;
+}
+
+.communications-grid table tr:hover {
+  background-color: #3d566e;
+}
+
+.highlight-red {
+  background-color: #f8d7da;
+}
+
+.highlight-yellow {
+  background-color: #fff3cd;
+}

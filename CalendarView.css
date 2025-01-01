@@ -1,0 +1,129 @@
+/* General Dark Mode Styles */
+body {
+  background-color: #121212; /* Dark background */
+  color: #e0e0e0; /* Light text */
+  font-family: Arial, sans-serif;
+}
+
+/* Calendar Container */
+.calendar-view {
+  width: 80%;
+  margin: 0 auto;
+  padding: 20px;
+  background-color: #1e1e1e; /* Dark background */
+  border-radius: 8px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2);
+}
+
+/* Calendar Controls */
+.calendar-controls {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 20px;
+  color: #bbb; /* Light gray text */
+}
+
+.calendar-controls button {
+  background-color: #333;
+  color: #bbb;
+  border: 1px solid #444;
+  padding: 8px 16px;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+.calendar-controls button:hover {
+  background-color: #555;
+}
+
+/* Calendar Grid */
+.calendar-grid {
+  display: grid;
+  grid-template-columns: repeat(7, 1fr);
+  gap: 10px;
+}
+
+/* Calendar Day */
+.calendar-day {
+  padding: 20px;
+  border: 1px solid #333;
+  background-color: #2a2a2a; /* Dark gray background */
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: background-color 0.2s ease;
+}
+
+.calendar-day.active {
+  background-color: #3a3a3a; /* Highlight active day */
+}
+
+.calendar-day:hover {
+  background-color: #444; /* Lighten on hover */
+}
+
+/* Day Communications */
+.day-communications {
+  margin-top: 10px;
+  font-size: 12px;
+  color: #bbb; /* Light gray text */
+}
+
+/* Communication Item (Past) */
+.communication-item.past {
+  font-size: 12px;
+  margin-top: 5px;
+  color: #ff6347; /* Red color for past communications */
+}
+
+.communication-item.upcoming {
+  font-size: 12px;
+  margin-top: 5px;
+  color: #32cd32; /* Green color for upcoming communications */
+}
+
+/* Company Name */
+.company-name {
+  font-weight: bold;
+}
+
+/* Communication Type and Date */
+.comm-type {
+  font-style: italic;
+  color: #ccc;
+}
+
+.comm-date {
+  font-size: 10px;
+}
+
+/* Dark Mode Media Queries */
+@media (prefers-color-scheme: dark) {
+  .calendar-view {
+    background-color: #181818; /* Darker background for container */
+  }
+
+  .calendar-day {
+    background-color: #2b2b2b;
+    border: 1px solid #444;
+  }
+
+  .calendar-day.active {
+    background-color: #353535;
+  }
+
+  .calendar-day:hover {
+    background-color: #484848;
+  }
+
+  .communication-item.past {
+    color: #ff6347; /* Past communication in red */
+  }
+
+  .communication-item.upcoming {
+    color: #32cd32; /* Upcoming communication in green */
+  }
+}

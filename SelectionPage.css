@@ -1,0 +1,148 @@
+/* General page styles */
+.selection-page {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+    background: linear-gradient(135deg, #1b1b1b, #383838); /* Darker gradient background */
+    color: #ffffff; /* Light text */
+    font-family: 'Montserrat', sans-serif; /* Elegant font */
+    text-align: center;
+    padding: 40px;
+    transition: all 0.5s ease-in-out;
+  }
+  
+  /* Selection container */
+  .selection-container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background: rgba(45, 45, 45, 0.9); /* Slightly dark transparent background */
+    border-radius: 20px;
+    padding: 40px;
+    box-shadow: 0 15px 30px rgba(0, 0, 0, 0.8);
+    max-width: 400px; /* Reduced outer box size */
+    width: 100%;
+    text-align: center;
+    transition: all 0.3s ease-in-out;
+  }
+  
+  /* Title Styling */
+  h1 {
+    font-size: 2.5rem;
+    margin-bottom: 40px;
+    color: #00bcd4; /* Fresh cyan color for title */
+    letter-spacing: 2px;
+    text-transform: uppercase;
+    animation: fadeIn 1.5s ease-in-out;
+  }
+  
+  /* Button container */
+  .options {
+    display: flex;
+    gap: 30px;
+    justify-content: center;
+    flex-wrap: wrap; /* Allows the buttons to stack on smaller screens */
+  }
+  
+  /* Button Styles */
+  button {
+    padding: 18px 35px;
+    font-size: 1.4rem;
+    font-weight: 600;
+    color: #ffffff;
+    background-color: #00796b; /* Deep teal green */
+    border: 2px solid #00796b;
+    border-radius: 12px;
+    cursor: pointer;
+    position: relative;
+    transition: all 0.3s ease;
+    box-shadow: 0 4px 15px rgba(0, 121, 107, 0.4);
+    outline: none;
+  }
+  
+  /* Button glow effect */
+  button::before {
+    content: '';
+    position: absolute;
+    top: -5px;
+    left: -5px;
+    right: -5px;
+    bottom: -5px;
+    background: linear-gradient(45deg, #ff4081, #ff80ab);
+    background-size: 400% 400%;
+    border-radius: 12px;
+    z-index: -1;
+    animation: glowing 20s linear infinite;
+  }
+  
+  /* Hover effects */
+  button:hover {
+    background-color: #004d40; /* Darker teal green on hover */
+    border-color: #ffffff;
+    box-shadow: 0 8px 30px rgba(0, 0, 0, 0.6);
+    transform: scale(1.1);
+  }
+  
+  /* Active button effect */
+  button:active {
+    transform: scale(0.98);
+    background-color: #00796b;
+  }
+  
+  /* Focus styles */
+  button:focus-visible {
+    outline: none;
+    box-shadow: 0 0 0 3px #00bcd4; /* Glowing effect for accessibility */
+  }
+  
+  /* Glow and animation effects */
+  @keyframes glowing {
+    0% {
+      background-position: 0 0;
+    }
+    50% {
+      background-position: 400% 0;
+    }
+    100% {
+      background-position: 0 0;
+    }
+  }
+  
+  /* Fade-in effect for title */
+  @keyframes fadeIn {
+    0% {
+      opacity: 0;
+      transform: translateY(-50px);
+    }
+    100% {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }
+  
+  /* Responsive Design */
+  @media (max-width: 768px) {
+    h1 {
+      font-size: 2rem;
+      margin-bottom: 30px;
+    }
+  
+    .selection-container {
+      padding: 30px;
+      max-width: 350px; /* Adjust the width on smaller screens */
+    }
+  
+    .options {
+      flex-direction: column;
+      gap: 25px;
+    }
+  
+    button {
+      font-size: 1.2rem;
+      padding: 15px 30px;
+    }
+  }
+  
