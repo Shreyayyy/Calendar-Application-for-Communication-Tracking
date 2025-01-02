@@ -40,3 +40,5 @@ State Sharing: Admin data is shared globally using CompanyContext.js.
 User
 Role Selection: Navigate to /user after selecting the "User" option.
 Dashboard and Calendar View: Use Dashboard.js and CalendarView.js for company insights and scheduling.
+
+LIVE LINK - https://calendar-application-for-communicatio.netlify.app/
